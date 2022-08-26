@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
                                   width: 350.w,
                                   height: 300.h,
                                   child: Container(
-                                    margin: const EdgeInsets.all(20),
+                                    margin:  EdgeInsets.all(20.sp),
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                           fit: BoxFit.fill,
