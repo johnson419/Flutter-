@@ -76,7 +76,7 @@ class _ProfileState extends State<Profile> {
                               ),
                             ),
                             Container(
-                              margin: const EdgeInsets.all(5),
+                              margin:  EdgeInsets.all(5.sp),
                               child: Row(
                                 children: [
                                   SizedBox(
@@ -111,7 +111,7 @@ class _ProfileState extends State<Profile> {
                             Container(
                               width: 100.w,
                               height: 300.h,
-                              margin: const EdgeInsets.all(20),
+                              margin:  EdgeInsets.all(20.sp),
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                     fit: BoxFit.fill,
