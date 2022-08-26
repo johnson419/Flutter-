@@ -3,7 +3,6 @@
 
 import 'package:instagram_clone/register_api.dart';
 
-import 'homepage.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

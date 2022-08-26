@@ -35,7 +35,7 @@ class _HomepageState extends State<Homepage> {
           appBar: AppBar(
             actions: [
               Container(
-                margin: const EdgeInsets.fromLTRB(0, 13, 2, 0),
+                margin:  EdgeInsets.fromLTRB(0.sp, 13.sp, 2.sp, 0.sp),
                 child: Text(
                   'Logout',
                   style: GoogleFonts.poppins(
