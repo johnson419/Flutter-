@@ -7,7 +7,6 @@ import 'package:instagram_clone/login.dart';
 import 'package:instagram_clone/register.dart';
 import 'package:instagram_clone/token.dart';
 import 'package:page_transition/page_transition.dart';
-
 import 'homepage.dart';
 
 void main(List<String> args) {

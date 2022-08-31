@@ -1,9 +1,5 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
-
-
 import 'package:instagram_clone/register_api.dart';
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -38,7 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
           appBar: AppBar(
               title: Text(
             'Register page',
-            style: GoogleFonts.poppins(
+            style: GoogleFonts.roboto(
               fontSize: 20.sp,
             ),
           )),
@@ -66,7 +62,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         width: 285.w,
                         child: Text(
                           'REGISTRATION FORM',
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                             fontSize: 20.sp,
                             fontWeight: FontWeight.bold,
                           ),
@@ -154,7 +150,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               ),
                               label: Text(
                                 'Signup',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                     fontSize: 18.sp,
                                     fontWeight: FontWeight.w500,

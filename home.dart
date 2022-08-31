@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:math';
-import 'launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -81,7 +79,7 @@ class _HomeState extends State<Home> {
                                       ),
                                       Text(
                                         data.elementAt(index).firstName,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                           textStyle: TextStyle(
                                             fontSize: 25.sp,
                                             fontWeight: FontWeight.w500,
@@ -93,7 +91,7 @@ class _HomeState extends State<Home> {
                                       ),
                                       Text(
                                         data.elementAt(index).lastName,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                           textStyle: TextStyle(
                                             fontSize: 25.sp,
                                             fontWeight: FontWeight.w500,
@@ -130,7 +128,7 @@ class _HomeState extends State<Home> {
                                     children: [
                                       Text(
                                         data.elementAt(index).email,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                           textStyle: TextStyle(
                                             fontSize: 25.sp,
                                             fontWeight: FontWeight.w500,

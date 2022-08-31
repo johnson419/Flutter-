@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
         appBar: AppBar(
           title: Text(
             'Login',
-            style: GoogleFonts.poppins(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontSize: 30.sp,
               ),
@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 padding: EdgeInsets.fromLTRB(10.sp, 20.sp, 10.sp, 10.sp),
                 child: Text(
                   'Hello there',
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                       fontSize: 20.sp,
                     ),
@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                 padding:  EdgeInsets.fromLTRB(10.sp, 10.sp, 10.sp, 20.sp),
                 child: Text(
                   'Login into your account',
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                       fontSize: 30.sp,
                       fontWeight: FontWeight.bold,
@@ -123,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: ElevatedButton(
                   child: Text(
                     'Login',
-                    style: GoogleFonts.poppins(),
+                    style: GoogleFonts.roboto(),
                   ),
                   onPressed: () {
                     login(emailController.text, passwordController.text, context);
@@ -138,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   child: Text(
                     'Forgot Password?',
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                       height: 1.5,
                       textStyle: const TextStyle(
                         color: Colors.blue,
@@ -151,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                 alignment: Alignment.center,
                 padding:  EdgeInsets.fromLTRB(10.sp, 50.sp, 10.sp, 20.sp),
                 child: Text('Don\'t have an account?',
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                       textStyle: TextStyle(
                         fontSize: 20.sp,
                       ),
@@ -169,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: Text(
                       'SIGN UP',
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                         textStyle: TextStyle(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.bold,

@@ -69,7 +69,7 @@ class _ProfileState extends State<Profile> {
                               width: double.infinity,
                               child: Text(
                                 'Welcome to your profile',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                     fontSize: 25.sp,
                                     fontWeight: FontWeight.w500,
@@ -86,7 +86,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     data.firstName,
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
                                         fontFamily: 'cursive',
                                         fontSize: 25.sp,
@@ -99,7 +99,7 @@ class _ProfileState extends State<Profile> {
                                   ),
                                   Text(
                                     data.lastName,
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
                                         fontFamily: 'cursive',
                                         fontSize: 25.sp,
@@ -125,7 +125,7 @@ class _ProfileState extends State<Profile> {
                               children: [
                                 Text(
                                   data.email,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                     textStyle: TextStyle(
                                       fontSize: 25.sp,
                                       fontWeight: FontWeight.w500,

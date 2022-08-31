@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:instagram_clone/home.dart';
 import 'package:instagram_clone/profile.dart';
-
 import 'login.dart';
 
 class Homepage extends StatefulWidget {
@@ -38,7 +37,7 @@ class _HomepageState extends State<Homepage> {
                 margin:  EdgeInsets.fromLTRB(0.sp, 13.sp, 2.sp, 0.sp),
                 child: Text(
                   'Logout',
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                       fontSize: 22.sp,
                       fontWeight: FontWeight.w500,
@@ -78,13 +77,13 @@ class _HomepageState extends State<Homepage> {
                   ),
                   label: 'Profile'),
             ],
-            unselectedLabelStyle: GoogleFonts.poppins(
+            unselectedLabelStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 color: Colors.black,
                 fontSize: 20.sp,
               ),
             ),
-            selectedLabelStyle: GoogleFonts.poppins(
+            selectedLabelStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 color: Colors.black,
                 fontSize: 20.sp,
