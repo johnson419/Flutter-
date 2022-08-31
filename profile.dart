@@ -5,6 +5,8 @@ import 'package:http/http.dart';
 import 'package:instagram_clone/Models/user_profile.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -76,7 +78,7 @@ class _ProfileState extends State<Profile> {
                               ),
                             ),
                             Container(
-                              margin:  EdgeInsets.all(5.sp),
+                              margin: EdgeInsets.all(5.sp),
                               child: Row(
                                 children: [
                                   SizedBox(
@@ -111,7 +113,7 @@ class _ProfileState extends State<Profile> {
                             Container(
                               width: 100.w,
                               height: 300.h,
-                              margin:  EdgeInsets.all(20.sp),
+                              margin: EdgeInsets.all(20.sp),
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                     fit: BoxFit.fill,
@@ -131,7 +133,28 @@ class _ProfileState extends State<Profile> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () async{
+                                    String? encodeQueryParameters(
+                                              Map<String, String> params) {
+                                            return params.entries
+                                                .map((MapEntry<String, String>
+                                                        e) =>
+                                                    '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                                                .join('&');
+                                          }
+
+                                          //encodeparameters function
+                                          final Uri emailLaunchUri = Uri(
+                                            scheme: 'mailto',
+                                            path: data.email,
+                                            query: encodeQueryParameters(<
+                                                String, String>{
+                                              'subject': 'Wanting to say hi',
+
+                                            }),
+                                          );
+                                          launchUrl(emailLaunchUri);
+                                  },
                                   icon: Icon(
                                     Icons.email_rounded,
                                     size: 30.sp,

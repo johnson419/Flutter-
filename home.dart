@@ -1,10 +1,13 @@
 import 'dart:convert';
-
+import 'dart:math';
+import 'launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram_clone/Models/people_profiles.dart';
+
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,13 +20,12 @@ class _HomeState extends State<Home> {
   Future<List<Userinfo>> fetchUsers() async {
     var url = Uri.https('reqres.in', '/api/users', {'page': '2'});
     var response = await get(url);
-    
+
     if (response.statusCode == 200) {
       var data1 = jsonDecode(response.body);
       Iterable data = data1['data'];
 
       return List<Userinfo>.from(data.map((user) {
-        
         return Userinfo.fromJson(user);
       }));
     } else {
@@ -108,7 +110,7 @@ class _HomeState extends State<Home> {
                                   width: 350.w,
                                   height: 300.h,
                                   child: Container(
-                                    margin:  EdgeInsets.all(20.sp),
+                                    margin: EdgeInsets.all(20.sp),
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                           fit: BoxFit.fill,
@@ -123,7 +125,8 @@ class _HomeState extends State<Home> {
                                   height: 30.h,
                                   width: 479.w,
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Text(
                                         data.elementAt(index).email,
@@ -137,7 +140,36 @@ class _HomeState extends State<Home> {
                                       SizedBox(
                                         width: 15.w,
                                       ),
-                                      IconButton(onPressed: (){}, icon: Icon(Icons.email_rounded, size: 30.sp,), splashColor: Colors.blue[100],),
+                                      IconButton(
+                                        onPressed: () async {
+                                          
+                                          String? encodeQueryParameters(
+                                              Map<String, String> params) {
+                                            return params.entries
+                                                .map((MapEntry<String, String>
+                                                        e) =>
+                                                    '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                                                .join('&');
+                                          }
+
+                                          //encodeparameters function
+                                          final Uri emailLaunchUri = Uri(
+                                            scheme: 'mailto',
+                                            path: data.elementAt(index).email,
+                                            query: encodeQueryParameters(<
+                                                String, String>{
+                                              'subject': 'Wanting to say hi',
+
+                                            }),
+                                          );
+                                          launchUrl(emailLaunchUri);
+                                        },
+                                        icon: Icon(
+                                          Icons.email_rounded,
+                                          size: 30.sp,
+                                        ),
+                                        splashColor: Colors.blue[100],
+                                      ),
                                     ],
                                   ),
                                 ),
